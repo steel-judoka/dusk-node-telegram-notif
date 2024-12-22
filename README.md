@@ -6,7 +6,9 @@ Cron is a task scheduler in Linux that allows you to run commands at specified i
 1. Edit your crontab:
    ```crontab -e```
 2. Add a cron job (e.g., run every 30 minutes):\
-   ```*/30 * * * * grep "execute_state_transition" /var/log/rusk.log | tail -n 5 > /tmp/rusk_output.log && /opt/bot/notify_script.sh```\
+   ```*/30 * * * * (echo "Latest 10 INFO Logs:"; grep "INFO" /var/log/rusk.log | tail -n 10; echo ""; echo "Latest 10 ERROR Logs:"; grep "ERROR" /var/log/rusk.log | tail -n 10) > /tmp/rusk_output.log && /opt/bot/notify_script.sh```\
+   This command will grep the latest 10 ```INFO``` and ```ERROR``` level logs.
+   
    If you're unfamiliar with vi editor (a common default editor), follow these steps:
    - Press ```i``` to enter insert mode (you can now paste or type your command).
    - Add your command at the end of the document

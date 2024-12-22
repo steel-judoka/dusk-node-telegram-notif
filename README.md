@@ -50,4 +50,4 @@ grep "execute_state_transition" /var/log/rusk.log | tail -n 5 > /tmp/rusk_output
 ```
 bash /opt/bot/notify_script.sh
 ```
-You should see the latest 5 log lines in your Telegram. 
+You should see the latest 10 ```INFO``` and ```ERROR``` level logs in your telegram. 

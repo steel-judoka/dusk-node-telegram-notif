@@ -45,7 +45,7 @@ Telegram bots are an easy way to send notifications. Follow these steps:
 ### 3. Test It 
 Run the script manually to test: 
 ```
-grep "execute_state_transition" /var/log/rusk.log | tail -n 5 > /tmp/rusk_output.log
+(echo "Latest 10 INFO Logs:"; grep "INFO" /var/log/rusk.log | tail -n 10; echo ""; echo "Latest 10 ERROR Logs:"; grep "ERROR" /var/log/rusk.log | tail -n 10) > /tmp/rusk_output.log
 ```
 ```
 bash /opt/bot/notify_script.sh

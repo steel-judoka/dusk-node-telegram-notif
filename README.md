@@ -17,7 +17,7 @@ Cron is a task scheduler in Linux that allows you to run commands at specified i
    - If you make a mistake:\
      Press Esc and type ```:q!``` followed by Enter to exit without saving, then retry the process.
 
-   If the default editor is cat, simply use ```Ctrl+X``` to save your changes.
+   If the default editor is nano, simply use ```Ctrl+X``` to save your changes.
      
 
 ### 2. Set Up a Telegram Bot for Notifications 
